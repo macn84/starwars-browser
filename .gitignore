@@ -33,3 +33,5 @@ lerna-debug.log*
 # Coverage
 coverage/
 *.lcov
+
+DEPLOYMENT.md

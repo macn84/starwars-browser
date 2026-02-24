@@ -130,48 +130,6 @@ Then open [http://localhost:3001](http://localhost:3001) — the Express server 
 
 > In production on GoDaddy, only `NODE_ENV=production` is needed. The frontend and backend share the same origin, so CORS is not required.
 
-## GitHub Setup
-
-### Creating a new repository
-
-1. Go to [https://github.com/new](https://github.com/new)
-2. Repository name: `starwars-browser`
-3. Visibility: Private or Public (your choice)
-4. **Do NOT** initialize with a README, .gitignore, or license (you already have these files)
-5. Click **Create repository**
-
-### Pushing to GitHub
-
-```bash
-cd /home/andrew/Starwars
-git init
-git add .
-git commit -m "feat: initial Star Wars API browser"
-git branch -M main
-git remote add origin https://github.com/macn84/starwars-browser.git
-git push -u origin main
-```
-
-### Subsequent pushes
-
-```bash
-git add .
-git commit -m "your commit message"
-git push
-```
-
-### Recommended branch strategy
-
-```
-main       — production-ready code only
-develop    — integration branch for features
-feature/*  — individual feature branches (e.g. feature/add-search)
-```
-
-## Deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for complete step-by-step instructions to deploy to GoDaddy Shared Hosting.
-
 ## API Endpoints
 
 The Express server exposes these proxy endpoints (all GET):
