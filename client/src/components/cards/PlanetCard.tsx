@@ -1,3 +1,7 @@
+// A summary card for one Star Wars planet, displayed in the Planets grid.
+// Shows the planet's name, climate, terrain, population, and diameter.
+// Clicking the card (or the "View Details" button) opens the full detail modal.
+
 import type { SwapiPlanet } from '../../types/swapi';
 import { extractId } from '../../utils/extractId';
 import styles from './Card.module.css';
@@ -24,6 +28,7 @@ export function PlanetCard({ planet, onSelect }: PlanetCardProps) {
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Population</span>
+          {/* toLocaleString() formats large numbers with commas: 1000000 → "1,000,000" */}
           {planet.population !== 'unknown'
             ? Number(planet.population).toLocaleString()
             : 'Unknown'}
@@ -33,6 +38,7 @@ export function PlanetCard({ planet, onSelect }: PlanetCardProps) {
           {planet.diameter !== 'unknown' ? `${planet.diameter} km` : 'Unknown'}
         </div>
       </div>
+      {/* e.stopPropagation() prevents the button click from also firing the card's onClick */}
       <button
         className={styles.viewButton}
         onClick={(e) => {

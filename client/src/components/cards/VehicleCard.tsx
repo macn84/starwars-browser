@@ -1,3 +1,8 @@
+// A summary card for one Star Wars vehicle, displayed in the Vehicles grid.
+// Unlike starships, vehicles can't travel through hyperspace (e.g. AT-AT walkers, speeders).
+// Shows the vehicle's name, model, class, manufacturer, and minimum crew size.
+// Clicking the card (or the "View Details" button) opens the full detail modal.
+
 import type { SwapiVehicle } from '../../types/swapi';
 import { extractId } from '../../utils/extractId';
 import styles from './Card.module.css';
@@ -20,7 +25,7 @@ export function VehicleCard({ vehicle, onSelect }: VehicleCardProps) {
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Class</span>
-          {vehicle.vehicle_class}
+          {vehicle.vehicle_class}  {/* e.g. "wheeled", "walker", "airspeeder" */}
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Manufacturer</span>

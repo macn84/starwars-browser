@@ -1,3 +1,7 @@
+// A summary card for one Star Wars starship, displayed in the Starships grid.
+// Shows the ship's name, model, class, manufacturer, and minimum crew size.
+// Clicking the card (or the "View Details" button) opens the full detail modal.
+
 import type { SwapiStarship } from '../../types/swapi';
 import { extractId } from '../../utils/extractId';
 import styles from './Card.module.css';
@@ -20,7 +24,7 @@ export function StarshipCard({ starship, onSelect }: StarshipCardProps) {
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Class</span>
-          {starship.starship_class}
+          {starship.starship_class}  {/* e.g. "Starfighter", "Freighter" */}
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Manufacturer</span>
@@ -28,7 +32,7 @@ export function StarshipCard({ starship, onSelect }: StarshipCardProps) {
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Crew</span>
-          {starship.crew}
+          {starship.crew}  {/* Minimum crew needed to fly the ship */}
         </div>
       </div>
       <button

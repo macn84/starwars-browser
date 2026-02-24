@@ -9,7 +9,6 @@ A full-stack TypeScript application for browsing the [Star Wars API (SWAPI)](htt
 | Backend  | Node.js, Express, TypeScript, Axios     |
 | Frontend | React 18, Vite, TypeScript, CSS Modules |
 | Testing  | Jest, ts-jest, Supertest, React Testing Library |
-| Hosting  | GoDaddy Shared Hosting (cPanel / Phusion Passenger) |
 
 ## Project Structure
 

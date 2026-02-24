@@ -1,3 +1,8 @@
+// A summary card for one Star Wars species, displayed in the Species grid.
+// Shows the species name, biological classification (e.g. "mammal"), designation
+// (sentient or not), language, and average lifespan.
+// Clicking the card (or the "View Details" button) opens the full detail modal.
+
 import type { SwapiSpecies } from '../../types/swapi';
 import { extractId } from '../../utils/extractId';
 import styles from './Card.module.css';
@@ -16,11 +21,11 @@ export function SpeciesCard({ species, onSelect }: SpeciesCardProps) {
       <div className={styles.meta}>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Classification</span>
-          {species.classification}
+          {species.classification}  {/* e.g. "mammal", "reptile", "artificial" */}
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Designation</span>
-          {species.designation}
+          {species.designation}  {/* "sentient" or "non-sentient" */}
         </div>
         <div className={styles.metaItem}>
           <span className={styles.metaLabel}>Language</span>

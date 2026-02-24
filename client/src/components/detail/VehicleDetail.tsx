@@ -1,3 +1,7 @@
+// Shows the full technical specifications of a single Star Wars vehicle.
+// Vehicles are ground or air transport that cannot travel through hyperspace
+// (e.g. AT-AT walkers, Sand Crawlers, Speeder Bikes).
+
 import type { SwapiVehicle } from '../../types/swapi';
 import { DetailField } from './DetailField';
 import styles from './DetailGrid.module.css';
@@ -12,6 +16,7 @@ export function VehicleDetail({ vehicle }: VehicleDetailProps) {
       <DetailField label="Model" value={vehicle.model} />
       <DetailField label="Class" value={vehicle.vehicle_class} />
       <DetailField label="Manufacturer" value={vehicle.manufacturer} />
+      {/* Format large credit amounts with commas for readability */}
       <DetailField label="Cost" value={vehicle.cost_in_credits !== 'unknown' ? `${Number(vehicle.cost_in_credits).toLocaleString()} credits` : 'Unknown'} />
       <DetailField label="Length" value={`${vehicle.length} m`} />
       <DetailField label="Crew" value={vehicle.crew} />
