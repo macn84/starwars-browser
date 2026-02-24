@@ -1,0 +1,48 @@
+.container {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px 0;
+  flex-wrap: wrap;
+}
+
+.button {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.button:hover:not(:disabled) {
+  background: rgba(255, 232, 31, 0.08);
+  border-color: var(--color-gold-dim);
+  box-shadow: var(--shadow-gold);
+}
+
+.button:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.info {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.count {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}

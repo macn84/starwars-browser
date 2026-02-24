@@ -1,0 +1,46 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.icon {
+  color: var(--color-error);
+  font-size: 2.5rem;
+}
+
+.title {
+  color: var(--color-error);
+  font-size: 1.2rem;
+}
+
+.message {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+.retry {
+  background: transparent;
+  border: 1px solid var(--color-gold-dim);
+  border-radius: var(--border-radius);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+  padding: 8px 24px;
+  text-transform: uppercase;
+  transition:
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+.retry:hover {
+  background: rgba(255, 232, 31, 0.08);
+  box-shadow: var(--shadow-gold);
+}
