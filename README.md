@@ -127,7 +127,7 @@ Then open [http://localhost:3001](http://localhost:3001) — the Express server 
 | `NODE_ENV`      | `development`            | `development` or `production`       |
 | `CLIENT_ORIGIN` | `http://localhost:5173`  | CORS allowed origin (dev only)      |
 
-> In production on GoDaddy, only `NODE_ENV=production` is needed. The frontend and backend share the same origin, so CORS is not required.
+> In production on Render.com, only `NODE_ENV=production` is needed. The frontend and backend share the same origin, so CORS is not required.
 
 ## API Endpoints
 

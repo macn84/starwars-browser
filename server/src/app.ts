@@ -40,8 +40,7 @@ export function createApp() {
   app.use('/api', apiRouter);
 
   // In production mode, serve the pre-built React website from the client/dist folder.
-  // This means a single Node.js process handles both the API and the website —
-  // which is required by GoDaddy's hosting environment (Phusion Passenger).
+  // This means a single Node.js process handles both the API and the website.
   if (config.NODE_ENV === 'production') {
     // Work out the absolute path to the built React files.
     const clientBuildPath = path.join(__dirname, '..', '..', 'client', 'dist');

@@ -19,6 +19,8 @@ client/dist/
 *.swp
 *.swo
 .claude/
+.sfdx/
+.sf/
 
 # OS
 .DS_Store
@@ -34,5 +36,6 @@ lerna-debug.log*
 # Coverage
 coverage/
 *.lcov
+
 
 DEPLOYMENT.md
