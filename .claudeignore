@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+*.lock
+*.min.js
+coverage/
+.git/
+client/dist/
+.github/
+.sfdx/
